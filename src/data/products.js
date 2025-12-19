@@ -1,0 +1,117 @@
+// products.js
+export const products = [
+  {
+    id: 1,
+    name: 'iPhone 15 Pro',
+    price: 99990,
+    category: 'electronics',
+    image: 'https://ir.ozone.ru/s3/multimedia-1-5/7340368649.jpg',
+    description: 'Флагманский смартфон с камерой 48 Мп',
+    inStock: true,
+    rating: 4.8,
+  },
+  {
+    id: 2,
+    name: 'Ноутбук MacBook Air M2',
+    price: 119990,
+    category: 'electronics',
+    image:
+      'https://avatars.mds.yandex.net/i?id=60f30375cd411c2b19806f3c361951dc5c9fdb8e-12494001-images-thumbs&n=13',
+    description: 'Легкий и мощный ноутбук',
+    inStock: true,
+    rating: 4.9,
+  },
+  {
+    id: 3,
+    name: 'Футболка хлопковая',
+    price: 1999,
+    category: 'clothes',
+    image:
+      'https://avatars.mds.yandex.net/i?id=d4fd9fe7baffe53ba902d8101221f378283b90a6-5516191-images-thumbs&n=13',
+    description: 'Мягкая футболка из 100% хлопка',
+    inStock: true,
+    rating: 4.5,
+  },
+  {
+    id: 4,
+    name: 'Джинсы slim fit',
+    price: 4999,
+    category: 'clothes',
+    image:
+      'https://avatars.mds.yandex.net/i?id=d65ebaed9d1db7fc42c244772c9c5779808c62ac-4432897-images-thumbs&n=13',
+    description: 'Классические синие джинсы',
+    inStock: false,
+    rating: 4.3,
+  },
+  {
+    id: 5,
+    name: 'JavaScript. Полное руководство',
+    price: 2499,
+    category: 'books',
+    image:
+      'https://avatars.mds.yandex.net/i?id=07203a990578594239dd11248273255c3c2d36a7-4450965-images-thumbs&n=13',
+    description: '7-е издание, Дэвид Флэнаган',
+    inStock: true,
+    rating: 4.7,
+  },
+  {
+    id: 6,
+    name: 'React быстро',
+    price: 1899,
+    category: 'books',
+    image:
+      'https://avatars.mds.yandex.net/i?id=c7dd4a73185303e7fe9f3ab203c741c413ffb1aa-15505573-images-thumbs&n=13',
+    description: 'Современные шаблоны и лучшие практики',
+    inStock: true,
+    rating: 4.6,
+  },
+  {
+    id: 7,
+    name: 'Беговая дорожка',
+    price: 45990,
+    category: 'sports',
+    image: 'https://avatars.mds.yandex.net/i?id=ab8dc6f6b54d0e34028cbba1ec43ea2706795d8f-4821199-images-thumbs&n=13',
+    description: 'Электрическая, скорость до 16 км/ч',
+    inStock: true,
+    rating: 4.4,
+  },
+  {
+    id: 8,
+    name: 'Гантели наборные',
+    price: 7990,
+    category: 'sports',
+    image: 'https://avatars.mds.yandex.net/i?id=07fd1bf8275169ad2a2d676a518c72fd732a9301-10311215-images-thumbs&n=13',
+    description: 'Набор до 20 кг, хромированные',
+    inStock: true,
+    rating: 4.2,
+  },
+  {
+    id: 9,
+    name: 'Наушники Sony WH-1000XM5',
+    price: 32990,
+    category: 'electronics',
+    image: 'https://avatars.mds.yandex.net/i?id=1d955b0116a13722c5244f65c7e2c5ec16bca863-12011805-images-thumbs&n=13',
+    description: 'Беспроводные с шумоподавлением',
+    inStock: true,
+    rating: 4.8,
+  },
+  {
+    id: 10,
+    name: 'Кроссовки для бега',
+    price: 8990,
+    category: 'sports',
+    image: 'https://avatars.mds.yandex.net/i?id=ddc6ac25fdc01c59041a2938c05378ec01481764-16118084-images-thumbs&n=13',
+    description: 'Амортизация, дышащий материал',
+    inStock: false,
+    rating: 4.5,
+  },
+];
+
+// Категории для фильтров
+export const categories = [
+  { id: 'all', name: 'Все товары' },
+  { id: 'electronics', name: 'Электроника' },
+  { id: 'clothes', name: 'Одежда' },
+  { id: 'books', name: 'Книги' },
+  { id: 'sports', name: 'Спорт' },
+];

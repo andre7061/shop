@@ -1,0 +1,194 @@
+.card {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.07);
+  transition: all 0.3s ease;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  cursor: pointer;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12);
+}
+
+.card-image {
+  margin: auto;
+  display: block;
+  width: 300px;
+  height: 300px;
+  object-fit: contain;
+}
+
+.card-content {
+  padding: 1.5rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.card h2 {
+    text-align: center;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #2d3748;
+  margin-bottom: 0.75rem;
+  line-height: 1.3;
+}
+
+.card .description {
+  color: #718096;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin-bottom: 1rem;
+  flex: 1;
+}
+
+.card .price {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #2d3748;
+  margin-bottom: 0.5rem;
+}
+
+.card .rating {
+  display: inline-flex;
+  align-items: center;
+  background: #fef3c7;
+  color: #92400e;
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  align-self: flex-start;
+}
+
+.card .rating::before {
+  content: '★';
+  margin-right: 0.25rem;
+}
+
+/* Статус наличия */
+.availability {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  padding: 0.4rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.availability.in-stock {
+  background: #10b981;
+  color: white;
+}
+
+.availability.out-of-stock {
+  background: #ef4444;
+  color: white;
+}
+
+
+.add-to-cart {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  padding: 0.875rem 1.5rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 100%;
+  margin-top: auto;
+  position: relative;
+}
+
+.add-to-cart.in-cart {
+  background: linear-gradient(135deg, #48bb78 0%, #38a169 100%);
+  padding-right: 3rem; 
+}
+
+
+.add-to-cart.in-cart::after {
+  content: '🛒';
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.2rem;
+  opacity: 0.9;
+  animation: bounceIn 0.5s ease;
+}
+
+
+@keyframes bounceIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-50%) scale(0.5);
+  }
+  70% {
+    opacity: 0.7;
+    transform: translateY(-50%) scale(1.2);
+  }
+  100% {
+    opacity: 0.9;
+    transform: translateY(-50%) scale(1);
+  }
+}
+
+
+.add-to-cart.in-cart:hover {
+  background: linear-gradient(135deg, #38a169 0%, #2f855a 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(56, 161, 105, 0.3);
+}
+
+/* Эффект клика */
+.add-to-cart.in-cart:active {
+  transform: translateY(0);
+}
+
+/* Текст кнопки (немного смещаем влево из-за иконки) */
+.add-to-cart.in-cart span {
+  display: inline-block;
+  transform: translateX(-10px);
+}
+
+/* Для кнопки "В корзину" (обычное состояние) */
+.add-to-cart:not(.in-cart):hover {
+  opacity: 0.9;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(102, 126, 234, 0.3);
+}
+
+
+.add-to-cart:hover {
+  opacity: 0.9;
+  transform: scale(1.02);
+}
+
+.add-to-cart:disabled {
+  background: #cbd5e0;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Категория товара */
+.category {
+  display: inline-block;
+  color: #667eea;
+  font-size: 0.875rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
